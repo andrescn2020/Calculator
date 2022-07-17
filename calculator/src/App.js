@@ -1,12 +1,15 @@
+import "./styles.css";
+
 function App() {
   return (
     <div className="calculator-grid">
       <div className="output">
-        <div className="previous-operand"></div>
-        <div className="current-operand"></div>
+        <div className="previous-operand">123,234 *</div>
+        <div className="current-operand">123,234</div>
       </div>
       <button className="span-two">AC</button>
       <button> DEL </button>
+      <button> ÷ </button>
       <button> 1 </button>
       <button> 2 </button>
       <button> 3 </button>
@@ -21,7 +24,7 @@ function App() {
       <button> - </button>
       <button> . </button>
       <button> 0 </button>
-      <button className="psna-two"> = </button>
+      <button className="span-two"> = </button>
     </div>
   );
 }
