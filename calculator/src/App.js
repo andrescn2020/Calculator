@@ -78,49 +78,7 @@ switch( type ) {
 
     }
 
-    function evaluate ( { currentOperand, previousOperand, operation } ) {
-
-      const current = parseFloat(currentOperand);
-      const prev = parseFloat(previousOperand);
-
-      console.log(currentOperand);
-      console.log(previousOperand);
-      
-      if(isNaN(current) || isNaN(prev)) return "";
-
-      let computation = "";
-
-      switch ( operation ) {
-
-        case "+":
-
-          computation = prev + current;
-
-          break
-
-        case "-":
-
-          computation = prev - current;
-
-          break
-
-        case "*":
-
-          computation = prev * current;
-  
-          break
-
-        case "÷":
-
-            computation = prev / current;
     
-            break
-
-      }
-
-      return computation.toString();
-
-    }
 
     return {
 
@@ -197,6 +155,50 @@ switch( type ) {
 }
 
 const INTEGER_FORMATTER = new Intl.NumberFormat("en-us", { maximumFractionDigits: 0, });
+
+function evaluate ( { currentOperand, previousOperand, operation } ) {
+
+  const current = parseFloat(currentOperand);
+  const prev = parseFloat(previousOperand);
+
+  console.log(currentOperand);
+  console.log(previousOperand);
+  
+  if(isNaN(current) || isNaN(prev)) return "";
+
+  let computation = "";
+
+  switch ( operation ) {
+
+    case "+":
+
+      computation = prev + current;
+
+      break
+
+    case "-":
+
+      computation = prev - current;
+
+      break
+
+    case "*":
+
+      computation = prev * current;
+
+      break
+
+    case "÷":
+
+        computation = prev / current;
+
+        break
+
+  }
+
+  return computation.toString();
+
+}
 
 function formatOperand(operand) {
 
