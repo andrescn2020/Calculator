@@ -82,6 +82,9 @@ switch( type ) {
 
       const current = parseFloat(currentOperand);
       const prev = parseFloat(previousOperand);
+
+      console.log(currentOperand);
+      console.log(previousOperand);
       
       if(isNaN(current) || isNaN(prev)) return "";
 
@@ -139,6 +142,7 @@ switch( type ) {
     return state
 
   }
+
 
   return {
 
